@@ -1,0 +1,16 @@
+#! /usr/bin/env/ python3
+from itertools import combinations
+def biggerIsGreater(w):
+    p = combinations(w,len(w))
+    while True:
+        it = next(p, None)
+        print(''.join(list(it)))
+        if ''.join(list(it)) == w:
+            break
+    it = next(p, None)
+    if (it == None):
+        return None
+    else:
+        return list(it)
+print(''.join(biggerIsGreater('dkhc')))
+

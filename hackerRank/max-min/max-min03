@@ -1,0 +1,10 @@
+#1 /usr/bin/env python3
+"""
+In the case of the array of intgers, the unfairness will be minimal
+for the contiguos sorted array. So we must first sort the array, 
+and then select the part of it, which has mimimum unfairness
+"""    
+def maxMin(k, arr):
+    retVal = 0
+    sarr = sorted(arr)
+    return retVal

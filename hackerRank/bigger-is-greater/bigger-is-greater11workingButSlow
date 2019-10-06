@@ -1,0 +1,16 @@
+#! /usr/bin/env/ python3
+from itertools import permutations
+import functools
+def biggerIsGreater(w):
+    p = set(permutations(w)) # we use set instead of list, as we want unique combinations only
+    pSorted = list(sorted(p))
+    pSortStrings = list(map(''.join,pSorted))
+    indNextSmallest = pSortStrings.index(w) + 1
+    if (indNextSmallest + 1) > len(pSortStrings):
+        return 'no answer'
+    else:
+        return pSortStrings[indNextSmallest]
+    return indGiven
+
+huj = biggerIsGreater('bb')
+print(huj)

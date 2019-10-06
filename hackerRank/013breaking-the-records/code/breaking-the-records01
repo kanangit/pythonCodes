@@ -1,0 +1,5 @@
+#! /usr/bin/env python3
+
+def breakingRecords(scores):
+    return 0
+print(breakingRecords([1,2,3,4,5]))

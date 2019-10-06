@@ -1,0 +1,27 @@
+#! /usr/bin/env python3
+"""
+https://www.hackerrank.com/challenges/between-two-sets/problem
+"""
+def getTotalX(a,b):
+    startaVal = max(a)
+    endaVal = min(b)
+    endVal = max(b)
+
+    val = startaVal
+
+    temp_factorA = []
+    factorA = []
+
+    for val in range(startaVal,endaVal):
+        for x in a:
+            if (val % x == 0):
+                temp_factorA.append(val)
+        if (len(temp_factorA) == len(a)):
+            factorA.append(temp_factorA[0])
+        temp_factorA = []
+
+    return factorA
+a = [2,4]
+b = [16,32,96]
+sol = getTotalX(a,b)
+print(sol)

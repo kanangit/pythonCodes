@@ -1,0 +1,7 @@
+#! /usr/bin/env/ python3
+from itertools import permutations
+def biggerIsGreater(w):
+    p = permutations(w,2)
+    return p.next()
+
+print(biggerIsGreater('ab'))
